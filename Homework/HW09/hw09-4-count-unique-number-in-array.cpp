@@ -88,7 +88,12 @@ int main() {
     // แสดงค่า
     for ( int i = 0 ; i < n ; i++ ) {
         if ( array[ i ] != array [ i - 1 ] ) {
-            printf ( "%d -> %d values.\n", array[ i ] , count[ i ] + 1 ) ;
+            printf ( "%d -> %d value", array[ i ] , count[ i ] + 1 ) ;
+            // ถ้าตัวเลขมีซ้ำมากกว่า 1 จะให้เติม s หลังคำว่า value
+            if ( count[ i ] + 1 > 1 ) {
+                printf( "s" ) ;
+            } // end if
+            printf ( ".\n" ) ;
         } // end if   
     } // end for
     
